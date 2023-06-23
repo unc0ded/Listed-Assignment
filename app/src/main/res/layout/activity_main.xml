@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E6FFF"
+    android:clipChildren="false"
+    android:fitsSystemWindows="true"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0E6FFF"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/figtree"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/settings_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/settings_btn"
+                tools:text="Dashboard" />
+
+            <Button
+                android:id="@+id/settings_btn"
+                style="@style/Widget.App.Button.IconButton.Filled.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                app:icon="@drawable/wrench"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <com.unc0ded.listedapp.utils.CurvedBottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        style="@style/Widget.App.BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemTextAppearanceActive="@style/TextAppearance.App.BottomNavText"
+        app:itemTextAppearanceInactive="@style/TextAppearance.App.BottomNavText"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_bottom_nav">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-16dp"
+            android:backgroundTint="@color/text_link"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:fabCustomSize="64dp"
+            app:srcCompat="@drawable/baseline_add_24"
+            app:tint="@android:color/white" />
+
+    </com.unc0ded.listedapp.utils.CurvedBottomNavigationView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

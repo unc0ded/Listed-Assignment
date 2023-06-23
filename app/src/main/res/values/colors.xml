@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_trunks">#999CA0</color>
+    <color name="text_link">#0E6FFF</color>
+
+    <color name="today_clicks_background">#1F5C33CF</color>
+    <color name="total_clicks_background">#1F4AD15F</color>
+    <color name="total_links_background">#1F0E6FFF</color>
+    <color name="top_location_background">#1F0E6FFF</color>
+    <color name="top_source_background">#FFE9EC</color>
+    <color name="best_time_background">#FFF5E3</color>
+</resources>
